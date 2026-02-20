@@ -8,7 +8,7 @@ let package = Package(
         .executableTarget(
             name: "cave",
             path: ".",
-            exclude: ["Info.plist", "Cave.entitlements", "Resources", "build.sh", "build"]
+            exclude: ["Info.plist", "Cave.entitlements", "Resources", "build.sh", "build", "scripts"]
         )
     ]
 )
