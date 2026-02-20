@@ -44,7 +44,7 @@ func drawIcon(size: Int, output: URL) {
     try? data.write(to: output)
 }
 
-func main() {
+do {
     let base = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
     let iconset = base.appendingPathComponent("Resources/cave.iconset", isDirectory: true)
     try? FileManager.default.removeItem(at: iconset)
@@ -66,6 +66,7 @@ func main() {
     for (size, name) in files {
         drawIcon(size: size, output: iconset.appendingPathComponent(name))
     }
+} catch {
+    print("Error: \(error)")
+    exit(1)
 }
-
-main()

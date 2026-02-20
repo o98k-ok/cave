@@ -12,3 +12,6 @@ DerivedData/
 
 # Logs
 *.log
+
+# Generated iconset
+*.iconset/
