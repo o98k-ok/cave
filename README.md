@@ -39,3 +39,8 @@ open build/cave.app
 - `tag`（如 `v1.0.0`）：自动创建/更新 GitHub Release 并附带 `cave.dmg`
 
 工作流文件：`.github/workflows/build-dmg.yml`
+
+说明：该工作流会分别构建 `arm64` 与 `x86_64`，再合并为通用二进制（Universal）并打包成 `cave.dmg`。
+可在手动触发时选择：
+- `upload_release=false`：仅生成 artifact
+- `upload_release=true` + `tag=vX.Y.Z`：同时上传到对应 Release
