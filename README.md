@@ -2,6 +2,8 @@
 
 A macOS menu bar app for managing SSH tunnels.
 
+**Languages:** [中文](README.md) | [English](README.en.md) | [日本語](README.ja.md)
+
 ## 主要功能
 
 - 菜单栏常驻：快速管理 SSH 隧道（正向 `-L` / 反向 `-R`）
