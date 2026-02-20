@@ -51,7 +51,9 @@ final class SSHProcessManager {
                 "-o", "ServerAliveCountMax=3",
                 "-o", "ExitOnForwardFailure=yes",
                 "-o", "ConnectTimeout=15",
-                "-o", "StrictHostKeyChecking=accept-new"
+                "-o", "StrictHostKeyChecking=accept-new",
+                "-o", "ControlMaster=no",
+                "-o", "ControlPath=none"
             ]
 
             if let keyPath = config.sshKeyPath, !keyPath.isEmpty {
