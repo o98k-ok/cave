@@ -15,6 +15,7 @@ mkdir -p "${CONTENTS}/Resources"
 
 cp ".build/release/${APP_NAME}" "${CONTENTS}/MacOS/${APP_NAME}"
 cp "Info.plist" "${CONTENTS}/"
+cp "Resources/cave.icns" "${CONTENTS}/Resources/"
 
 echo -n "APPL????" > "${CONTENTS}/PkgInfo"
 

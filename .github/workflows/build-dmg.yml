@@ -55,6 +55,7 @@ jobs:
 
           chmod +x "${CONTENTS}/MacOS/${APP_NAME}"
           cp "Info.plist" "${CONTENTS}/"
+          cp "Resources/cave.icns" "${CONTENTS}/Resources/"
           echo -n "APPL????" > "${CONTENTS}/PkgInfo"
 
       - name: Verify universal binary
