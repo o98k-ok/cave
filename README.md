@@ -11,6 +11,17 @@ A macOS menu bar app for managing SSH tunnels.
 - 主题：`Dark / Light / CLI / Christmas`
 - 设置中心：开机启动、语言、主题、优雅退出（先关闭隧道）
 
+## 功能演示
+
+### 主界面
+![主界面](docs/screenshots/main-interface.png)
+
+### 添加隧道
+![添加隧道](docs/screenshots/add-tunnel.png)
+
+### 设置中心
+![设置中心](docs/screenshots/settings.png)
+
 ## 环境要求
 
 - macOS 13+
@@ -30,17 +41,3 @@ swift build
 ./build.sh
 open build/cave.app
 ```
-
-## 发布产物（GitHub Actions）
-
-仓库已配置自动构建 DMG：
-
-- `push` 到 `main`：自动构建并上传 `cave.dmg` 为 workflow artifact
-- `tag`（如 `v1.0.0`）：自动创建/更新 GitHub Release 并附带 `cave.dmg`
-
-工作流文件：`.github/workflows/build-dmg.yml`
-
-说明：该工作流会分别构建 `arm64` 与 `x86_64`，再合并为通用二进制（Universal）并打包成 `cave.dmg`。
-可在手动触发时选择：
-- `upload_release=false`：仅生成 artifact
-- `upload_release=true` + `tag=vX.Y.Z`：同时上传到对应 Release
